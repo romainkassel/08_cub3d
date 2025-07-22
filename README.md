@@ -1,4 +1,6 @@
-# Project #9 - cub3d
+# 08_cub3d
+
+## Project overview
 
 This project is inspired by the world-famous eponymous 90's game, which was the first FPS ever: Wolfenstein 3D.
 
@@ -19,3 +21,72 @@ The workload on this project was split as follows:
 For the ray-casting part:
 - I had the constraint to use the MiniLibX, the 42 school graphical library
 - I was inspired by the following algorithm, a valuable ressource for this project: https://lodev.org/cgtutor/raycasting.html
+
+### Prerequisites
+
+This project is using the MiniLibX, a graphical library mentionned above.<br/>
+To build this project, you will have to clone and install it.<br/>
+The steps will be described a little further.
+
+## How to use this repository?
+
+### Recommended Operating System (OS)
+
+I recommand to use a Linux distribution such as:
+
+- Latest stable version (LTS) of Ubuntu
+- Latest stable version (LTS) of Debian
+
+### Steps to follow
+
+1. Go to the directory where you want to clone the directory: `cd path/of/repository/`
+2. Clone this repository: `git clone git@github.com:romainkassel/08_cub3d.git`
+3. Enter into cloned repository: `cd 08_cub3d
+8. Build the project: `make`
+9. Run executable with a map as argument: `./cub3D config_files/map_main_ok.cub`
+10. Here you go! If everything went smoothly, the following window handled by the MiniLibX should open:
+
+<img width="1111" height="723" alt="cub3d-ray-casting-video-game-mandatory" src="https://github.com/user-attachments/assets/d5371160-81d1-41f7-b33f-4b148a9cf6ef" />
+
+## Notes to take in mind
+
+### Running program with a map as argument
+
+Within steps above, I have chosen the map_main_ok.cub map as argument because it is a valid and very complete map.<br />
+But feel free to select any map located in the folder `config_files/`.<br />
+Just take in mind that, for testing purposes and to meet project requirements, some maps are valid while others are rejected by the program.
+
+### Window size
+
+In order to fit small screen sizes, the default size for the MiniLibX window is 962x601.<br />
+If you want, you can update this parameters by :
+1. Openning the file `/includes/cub3d.h`
+2. Replacing the constant SCREEN_W and SCREEN_H by the values of your choice
+3. Saving your new screen resolution
+4. Building the project again by running `make fclean` and `make` or directly `make re` (if you just run `make`, changes will be ignored)
+
+### Building and running program with bonuses
+
+For this project, we decided to implement bonuses: wall collision management, a minimap and the ability to rotate the player's viewpoint with the mouse (left and right).
+In steps above, the `make` command built the program wit mandatory constraints.
+If you want to test bonuses, you just have to:
+1. Build the project with `make bonus`
+2. Run the executable `./cub3D_bonus` with the map of your choice (for instance: `./cub3D_bonus config_files/map_main_ok.cub`
+
+<img width="1109" height="723" alt="cub3d-ray-casting-video-game-bonus-minimap" src="https://github.com/user-attachments/assets/d66c2f28-2e5a-4132-b2ae-794fd2c79648" />
+
+You may notice a space under the minimap as follow:
+
+<img width="1109" height="721" alt="cub3d-ray-casting-video-game-bonus-minimap-space" src="https://github.com/user-attachments/assets/280b60c4-2fb4-4e2e-8ec8-4ecf906f606d" />
+
+It depends on your environment. If you experience this issue, you can fix it by:
+1. Openning the file `/includes/cub3d.h`
+2. Replacing the constant MINIMAP_PADDING_TOP by the value of your choice (for example, a value of `69` works at 42 school)
+3. Saving your update
+4. Building the project again by running `make fclean` and `make bonus` (if you just run `make bonus`, changes will be ignored)
+
+## I tested the game and it's cool! Now I'd like to clean it up. What do I do?
+
+1. Close the window by clicking on the cross at top right or by clicking on `CTRL + D` in your terminal
+4. Go outside of the repository: `cd ..`
+5. Remove the repository: `rm -rf 03_so_long`
