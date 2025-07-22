@@ -28,8 +28,8 @@
 # include <unistd.h>
 
 //Mandatory
-# define SCREEN_W 1920
-# define SCREEN_H 1080
+# define SCREEN_W 962
+# define SCREEN_H 601
 
 //Bonus
 // # define SCREEN_W 1366
@@ -39,7 +39,7 @@
 
 // minimap
 # define MINIMAP_SIZE_MAX 500
-# define MINIMAP_PADDING_TOP 69
+# define MINIMAP_PADDING_TOP 0
 # define PLAYER_COLOR 0x0000ff00
 # define EMPTY_CELL_BD_COL 0x333333
 # define EMPTY_CELL_BG_COL 0xffffff
