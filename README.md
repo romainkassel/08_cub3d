@@ -22,12 +22,6 @@ For the ray-casting part:
 - I had the constraint to use the MiniLibX, the 42 school graphical library
 - I was inspired by the following algorithm, a valuable ressource for this project: https://lodev.org/cgtutor/raycasting.html
 
-### Prerequisites
-
-This project is using the MiniLibX, a graphical library mentionned above.<br/>
-To build this project, you will have to clone and install it.<br/>
-The steps will be described a little further.
-
 ## How to use this repository?
 
 ### Recommended Operating System (OS)
